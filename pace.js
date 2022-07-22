@@ -367,7 +367,7 @@
       if (null == this.el) {
         if (!(t = document.querySelector(T.target))) throw new n();
         (this.el = document.createElement("div")),
-          (this.el.className = "pace pace-active"),
+          ((this.el.id = "pace_js"), (this.el.className = "pace pace-active")),
           (document.body.className = document.body.className.replace(
             /(pace-done )|/,
             "pace-running "
