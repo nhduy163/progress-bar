@@ -89,7 +89,7 @@
       startOnPageLoad: !0,
       restartOnPushState: !0,
       restartOnRequestAfter: 500,
-      target: "body",
+      target: "#main-layout",
       elements: { checkInterval: 100, selectors: ["body"] },
       eventLag: { minSamples: 10, sampleCount: 3, lagThreshold: 3 },
       ajax: { trackMethods: ["GET"], trackWebSockets: !0, ignoreURLs: [] },
@@ -367,11 +367,10 @@
       if (null == this.el) {
         if (!(t = document.querySelector(T.target))) throw new n();
         (this.el = document.createElement("div")),
-          ((this.el.id = "pace_js"), (this.el.className = "pace pace-active")),
-          (document.body.className = document.body.className.replace(
-            /(pace-done )|/,
-            "pace-running "
-          ));
+          ((this.el.id = "pacejs"), (this.el.className = "pace pace-active")),
+          (document.getElementById("icon-refresh").className = document
+            .getElementById("icon-refresh")
+            .className.replace(/(pace-done )|/, "pace-running "));
         var e = "" !== T.className ? " " + T.className : "";
         (this.el.innerHTML =
           '<div class="pace-progress' +
@@ -387,10 +386,9 @@
       var t = this.getElement();
       return (
         (t.className = t.className.replace("pace-active", "pace-inactive")),
-        (document.body.className = document.body.className.replace(
-          "pace-running ",
-          "pace-done "
-        ))
+        (document.getElementById("icon-refresh").className = document
+          .getElementById("icon-refresh")
+          .className.replace("pace-running", "pace-done"))
       );
     }),
     ($.prototype.update = function (t) {
