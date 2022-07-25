@@ -368,8 +368,8 @@
         if (!(t = document.querySelector(T.target))) throw new n();
         (this.el = document.createElement("div")),
           ((this.el.id = "pacejs"), (this.el.className = "pace pace-active")),
-          (document.getElementById("icon-refresh").className = document
-            .getElementById("icon-refresh")
+          (document.getElementById("btn_refresh").className = document
+            .getElementById("btn_refresh")
             .className.replace(/(pace-done )|/, "pace-running "));
         var e = "" !== T.className ? " " + T.className : "";
         (this.el.innerHTML =
@@ -386,8 +386,8 @@
       var t = this.getElement();
       return (
         (t.className = t.className.replace("pace-active", "pace-inactive")),
-        (document.getElementById("icon-refresh").className = document
-          .getElementById("icon-refresh")
+        (document.getElementById("btn_refresh").className = document
+          .getElementById("btn_refresh")
           .className.replace("pace-running", "pace-done"))
       );
     }),
