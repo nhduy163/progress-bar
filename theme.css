@@ -1,0 +1,13 @@
+.navbar-fixed-top {
+    background-color: bisque !important;
+}
+.top-search {
+    background-color: bisque !important;
+    border: 4px solid bisque !important;
+}
+.btn-sidebar {
+    background-color: bisque !important;
+}
+.nav-first-level.active {
+    border-left-color: bisque !important;
+}
